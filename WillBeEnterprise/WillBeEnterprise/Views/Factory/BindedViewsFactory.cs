@@ -20,6 +20,10 @@ namespace WillBeEnterprise.Views.Factory
         {
             if (typeof(View) == typeof(MainView))
                 return (new MainView() as View);
+            if (typeof(View) == typeof(LoginView))
+                return (new LoginView() as View);
+            if (typeof(View) == typeof(VideoPlayerView))
+                return (new VideoPlayerView() as View);
             throw NoSuchViewException.CreateException(typeof(View));
         }
 

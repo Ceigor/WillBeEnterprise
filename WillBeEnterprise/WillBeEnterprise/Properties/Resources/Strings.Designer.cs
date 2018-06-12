@@ -59,5 +59,41 @@ namespace WillBeEnterprise.Properties.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WillBeEnterprise.
+        /// </summary>
+        internal static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mocked App.
+        /// </summary>
+        internal static string MockedApp {
+            get {
+                return ResourceManager.GetString("MockedApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sound Player.
+        /// </summary>
+        internal static string SoundPlayer {
+            get {
+                return ResourceManager.GetString("SoundPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Player.
+        /// </summary>
+        internal static string VideoPlayer {
+            get {
+                return ResourceManager.GetString("VideoPlayer", resourceCulture);
+            }
+        }
     }
 }

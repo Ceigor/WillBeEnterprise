@@ -13,6 +13,8 @@ namespace WillBeEnterprise.Container
             var builder = new ContainerBuilder();
             builder.RegisterType<NavigationService>().As<INavigationService>();
             builder.RegisterType<MainViewModel>();
+            builder.RegisterType<LoginViewModel>();
+            builder.RegisterType<VideoPlayerViewModel>();
             container = builder.Build();
         }
 

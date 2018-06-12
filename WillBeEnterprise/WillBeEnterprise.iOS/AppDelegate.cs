@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Flex;
 using Foundation;
 using UIKit;
 
@@ -24,7 +24,7 @@ namespace WillBeEnterprise.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            FlexButton.Init();
             return base.FinishedLaunching(app, options);
         }
     }

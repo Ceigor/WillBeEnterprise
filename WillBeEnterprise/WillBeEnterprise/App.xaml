@@ -1,10 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:triggers="clr-namespace:WillBeEnterprise.Triggers"
              x:Class="WillBeEnterprise.App">
-	<Application.Resources>
-        <Thickness x:Key="Small">8,8,8,8</Thickness>
-        <Thickness x:Key="Medium">12,12,12,12</Thickness>
-        <Thickness x:Key="Large">16,16,16,16</Thickness>
-	</Application.Resources>
+    <Application.Resources>
+        <OnPlatform x:TypeArguments="x:Double" x:Key="SmallFontSize">
+            <On Platform="Android,iOS" Value ="8"/>
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:Double" x:Key="MediumFontSize">
+            <On Platform="Android,iOS" Value ="16"/>
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:Double" x:Key="LargeFontSize">
+            <On Platform="Android,iOS" Value ="24"/>
+        </OnPlatform>
+        <Thickness x:Key="SmallThickness">8,8,8,8</Thickness>
+        <Thickness x:Key="MediumThickness">12,12,12,12</Thickness>
+        <Thickness x:Key="LargeThickness">16,16,16,16</Thickness>
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="Padding" Value="{StaticResource SmallThickness}"/>
+        </Style>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#91abd6"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
+            <Setter Property="BorderRadius" Value="10"/>
+            <Setter Property="BorderWidth" Value="2"/>
+            <Setter Property="BorderColor" Value="White"/>
+            <Style.Triggers>
+                <EventTrigger Event= "Clicked">
+                    <triggers:FadingTriggerAction/>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
 </Application>

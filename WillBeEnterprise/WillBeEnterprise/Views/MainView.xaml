@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WillBeEnterprise.Views.MainView">
-    <StackLayout>
-        <Label Text="Where is the message?" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+             xmlns:extensions ="clr-namespace:WillBeEnterprise.Extensions"
+             xmlns:behaviors="clr-namespace:WillBeEnterprise.Behaviors"
+             x:Class="WillBeEnterprise.Views.MainView"
+             Title="WillBeEnterprise">
+    <ScrollView>
+        <StackLayout>
+            <Button Text="{extensions:Translate MockedApp}" Style="{StaticResource MenuButtonStyle}">
+                <Button.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToLoginCommand}"/>
+                </Button.Behaviors>
+            </Button>
+            <Button Text="{extensions:Translate VideoPlayer}" Style="{StaticResource MenuButtonStyle}">
+                <Button.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToVideoPlayerCommand}"/>
+                </Button.Behaviors>
+            </Button>
+            <Button Text="{extensions:Translate SoundPlayer}" Style="{StaticResource MenuButtonStyle}"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -1,9 +1,20 @@
-﻿using WillBeEnterprise.ViewModels.Base;
+﻿using System.Windows.Input;
+using WillBeEnterprise.ViewModels.Base;
+using WillBeEnterprise.Views;
+using Xamarin.Forms;
 
 namespace WillBeEnterprise.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        
+        public ICommand NavigateToLoginCommand { get; private set; }
+        public ICommand NavigateToVideoPlayerCommand { get; private set; }
+
+        public MainViewModel()
+        {
+            NavigateToLoginCommand = new Command(async() => await navigationService.NavigateToAsync<LoginView, LoginViewModel>());
+            NavigateToVideoPlayerCommand = new Command(() => navigationService.NavigateToAsync<VideoPlayerView, VideoPlayerViewModel>());
+        }
+
     }
 }
