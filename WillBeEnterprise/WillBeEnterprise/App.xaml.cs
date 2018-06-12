@@ -1,17 +1,21 @@
-using System;
+using System.Diagnostics;
+using WillBeEnterprise.ViewModels;
+using WillBeEnterprise.Views;
+using WillBeEnterprise.Views.Factory;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace WillBeEnterprise
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            var mainView = BindedViewsFactory.CreateBindedView<MainView, MainViewModel>();
+            Debug.WriteLine("MainPage is of type = " + mainView);
+            MainPage = new NavigationPage(mainView);
 		}
 
 		protected override void OnStart ()
