@@ -5,12 +5,32 @@
              xmlns:behaviors="clr-namespace:WillBeEnterprise.Behaviors"
              x:Class="WillBeEnterprise.Views.LoginView">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="{extensions:Translate Login}" Style="{StaticResource MainButtonStyle}">
-                <Button.Behaviors>
-                    <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding LoginCommand}"/>
-                </Button.Behaviors>
-            </Button>
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="button.png" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0" Margin="{StaticResource MediumThickness}" Grid.ColumnSpan="2">
+                <Label Text="{extensions:Translate LoginWith}" HorizontalOptions="StartAndExpand" Style="{StaticResource HeaderStyle}"/>
+                <Entry Placeholder="{extensions:Translate Email}" HorizontalOptions="FillAndExpand"></Entry>
+                <Entry Placeholder="{extensions:Translate Password}" IsPassword="True" HorizontalOptions="FillAndExpand"></Entry>
+                <Button Text="{extensions:Translate Login}" Style="{StaticResource MainButtonStyle}">
+                    <Button.Behaviors>
+                        <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding LoginCommand}"/>
+                    </Button.Behaviors>
+                </Button>
+            </StackLayout>
+            <Image Source="facebook.png" Grid.Row="2" Grid.Column="0" Margin="{StaticResource MediumLeftThickness}"/>
+            <Image Source="linkedin.png" Grid.Row="2" Grid.Column="1" Margin="{StaticResource MediumRightThickness}"/>
+            <Label Text="{extensions:Translate ContinueAsGuestUser}" HorizontalOptions="CenterAndExpand" Margin="{StaticResource SmallUpperThickness}"
+                   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

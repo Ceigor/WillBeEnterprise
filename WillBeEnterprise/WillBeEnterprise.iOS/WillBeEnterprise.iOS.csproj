@@ -168,4 +168,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\linkedin_svg.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\facebook_svg.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\linkedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\facebook.png" />
+  </ItemGroup>
 </Project>

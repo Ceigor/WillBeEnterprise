@@ -70,6 +70,24 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Continue as a Guest User.
+        /// </summary>
+        internal static string ContinueAsGuestUser {
+            get {
+                return ResourceManager.GetString("ContinueAsGuestUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string Login {
@@ -79,11 +97,29 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login with.
+        /// </summary>
+        internal static string LoginWith {
+            get {
+                return ResourceManager.GetString("LoginWith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mocked App.
         /// </summary>
         internal static string MockedApp {
             get {
                 return ResourceManager.GetString("MockedApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         

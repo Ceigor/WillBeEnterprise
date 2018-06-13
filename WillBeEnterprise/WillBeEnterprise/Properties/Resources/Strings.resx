@@ -120,11 +120,23 @@
   <data name="AppName" xml:space="preserve">
     <value>WillBeEnterprise</value>
   </data>
+  <data name="ContinueAsGuestUser" xml:space="preserve">
+    <value>Continue as a Guest User</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="LoginWith" xml:space="preserve">
+    <value>Login with</value>
+  </data>
   <data name="MockedApp" xml:space="preserve">
     <value>Mocked App</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
   </data>
   <data name="SoundPlayer" xml:space="preserve">
     <value>Sound Player</value>
