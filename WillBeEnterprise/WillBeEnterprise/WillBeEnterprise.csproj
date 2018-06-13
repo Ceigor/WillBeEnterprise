@@ -5,9 +5,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Properties\Resources\Svgs\facebook.svg" />
+    <None Remove="Properties\Resources\Svgs\linkedin.svg" />
+    <None Remove="Views\facebook_svg.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources\Svgs\facebook.svg" />
+    <EmbeddedResource Include="Properties\Resources\Svgs\linkedin.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.1" />
     <PackageReference Include="Forms.Controls.FlexButton" Version="0.7.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.60.1" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
 

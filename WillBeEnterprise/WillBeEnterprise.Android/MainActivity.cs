@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FFImageLoading.Forms.Platform;
 
 namespace WillBeEnterprise.Droid
 {
@@ -16,6 +17,7 @@ namespace WillBeEnterprise.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            CachedImageRenderer.Init(true);
             SetMainTheme();
             base.OnCreate(bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
