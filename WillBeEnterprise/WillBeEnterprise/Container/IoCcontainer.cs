@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using WillBeEnterprise.Services.Http;
 using WillBeEnterprise.Services.Navigation;
 using WillBeEnterprise.ViewModels;
 
@@ -12,6 +13,7 @@ namespace WillBeEnterprise.Container
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<NavigationService>().As<INavigationService>();
+            builder.RegisterType<HttpService>().As<IHttpService>();
             builder.RegisterType<MainViewModel>();
             builder.RegisterType<LoginViewModel>();
             builder.RegisterType<VideoPlayerViewModel>();

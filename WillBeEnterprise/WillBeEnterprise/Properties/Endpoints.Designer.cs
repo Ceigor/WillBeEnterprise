@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WillBeEnterprise.Properties.Resources {
+namespace WillBeEnterprise.Properties {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace WillBeEnterprise.Properties.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Strings {
+    internal class Endpoints {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Strings() {
+        internal Endpoints() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace WillBeEnterprise.Properties.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WillBeEnterprise.Properties.Resources.Strings", typeof(Strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WillBeEnterprise.Properties.Endpoints", typeof(Endpoints).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,11 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WillBeEnterprise.
-        /// </summary>
-        internal static string AppName {
-            get {
-                return ResourceManager.GetString("AppName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Login.
+        ///   Looks up a localized string similar to &quot;http://dadada&quot;.
         /// </summary>
         internal static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mocked App.
-        /// </summary>
-        internal static string MockedApp {
-            get {
-                return ResourceManager.GetString("MockedApp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sound Player.
-        /// </summary>
-        internal static string SoundPlayer {
-            get {
-                return ResourceManager.GetString("SoundPlayer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Video Player.
-        /// </summary>
-        internal static string VideoPlayer {
-            get {
-                return ResourceManager.GetString("VideoPlayer", resourceCulture);
             }
         }
     }

@@ -19,7 +19,7 @@
         <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
             <Setter Property="Padding" Value="{StaticResource SmallThickness}"/>
         </Style>
-        <Style x:Key="MenuButtonStyle" TargetType="Button">
+        <Style x:Key="MainButtonStyle" TargetType="Button">
             <Setter Property="BackgroundColor" Value="#91abd6"/>
             <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>

@@ -7,17 +7,17 @@
              Title="WillBeEnterprise">
     <ScrollView>
         <StackLayout>
-            <Button Text="{extensions:Translate MockedApp}" Style="{StaticResource MenuButtonStyle}">
+            <Button Text="{extensions:Translate MockedApp}" Style="{StaticResource MainButtonStyle}">
                 <Button.Behaviors>
                     <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToLoginCommand}"/>
                 </Button.Behaviors>
             </Button>
-            <Button Text="{extensions:Translate VideoPlayer}" Style="{StaticResource MenuButtonStyle}">
+            <Button Text="{extensions:Translate VideoPlayer}" Style="{StaticResource MainButtonStyle}">
                 <Button.Behaviors>
                     <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToVideoPlayerCommand}"/>
                 </Button.Behaviors>
             </Button>
-            <Button Text="{extensions:Translate SoundPlayer}" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Text="{extensions:Translate SoundPlayer}" Style="{StaticResource MainButtonStyle}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

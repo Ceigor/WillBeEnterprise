@@ -14,10 +14,14 @@
   <ItemGroup>
     <Folder Include="Animations\" />
     <Folder Include="Converters\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Properties\Endpoints.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Endpoints.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources\Strings.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -29,6 +33,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Properties\Endpoints.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Endpoints.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources\Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
