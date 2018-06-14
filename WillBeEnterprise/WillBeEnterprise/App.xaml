@@ -2,8 +2,11 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:triggers="clr-namespace:WillBeEnterprise.Triggers"
+             xmlns:customView ="clr-namespace:WillBeEnterprise.Views.Custom"
              x:Class="WillBeEnterprise.App">
     <Application.Resources>
+        <Color x:Key="OrangeGradientStartColor">#f29304</Color>
+        <Color x:Key="OrangeGradientEndColor">#ffd002</Color>
         <OnPlatform x:TypeArguments="x:Double" x:Key="SmallFontSize">
             <On Platform="Android,iOS" Value ="12"/>
         </OnPlatform>
@@ -12,6 +15,9 @@
         </OnPlatform>
         <OnPlatform x:TypeArguments="x:Double" x:Key="LargeFontSize">
             <On Platform="Android,iOS" Value ="20"/>
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:Double" x:Key="GradientButtonCornerRadius">
+            <On Platform="Android,iOS" Value ="40"/>
         </OnPlatform>
         <Thickness x:Key="SmallThickness">8,8,8,8</Thickness>
         <Thickness x:Key="SmallUpperThickness">0,8,0,0</Thickness>
@@ -31,11 +37,23 @@
             <Setter Property="BackgroundColor" Value="#91abd6"/>
             <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
-            <Setter Property="BorderRadius" Value="10"/>
+            <Setter Property="CornerRadius" Value="10"/>
             <Setter Property="BorderWidth" Value="2"/>
             <Setter Property="BorderColor" Value="White"/>
             <Style.Triggers>
                 <EventTrigger Event= "Clicked">
+                    <triggers:FadingTriggerAction/>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="GradientButtonStyle" TargetType="customView:GradientButton">
+            <Setter Property="StartColor" Value="{StaticResource OrangeGradientStartColor}"/>
+            <Setter Property="EndColor" Value="{StaticResource OrangeGradientEndColor}"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
+            <Setter Property="CornerRadius" Value="50"/>
+            <Style.Triggers>
+                <EventTrigger Event = "Clicked">
                     <triggers:FadingTriggerAction/>
                 </EventTrigger>
             </Style.Triggers>

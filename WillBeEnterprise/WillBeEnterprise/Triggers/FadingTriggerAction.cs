@@ -10,9 +10,9 @@ namespace WillBeEnterprise.Triggers
 
         public FadingTriggerAction()
         {
-            Scale = 0.5;
+            Scale = 0.75;
             Length = 500;
-            Opacity = 0.1;
+            Opacity = 0.25;
         }
 
         protected override async void Invoke(VisualElement visual)

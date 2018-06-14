@@ -13,7 +13,7 @@ namespace WillBeEnterprise.ViewModels
         public MainViewModel()
         {
             NavigateToLoginCommand = new Command(async() => await navigationService.NavigateToAsync<LoginView, LoginViewModel>());
-            NavigateToVideoPlayerCommand = new Command(() => navigationService.NavigateToAsync<VideoPlayerView, VideoPlayerViewModel>());
+            NavigateToVideoPlayerCommand = new Command(async() => await navigationService.NavigateToAsync<VideoPlayerView, VideoPlayerViewModel>());
         }
 
     }
