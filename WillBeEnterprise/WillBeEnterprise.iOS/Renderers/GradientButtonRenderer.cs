@@ -12,12 +12,11 @@ namespace WillBeEnterprise.iOS.Renderers
 {
     public class GradientButtonRenderer : ButtonRenderer
     {
+        private CAGradientLayer GradientLayer;
+
         public override CGRect Frame
         {
-            get
-            {
-                return base.Frame;
-            }
+            get { return base.Frame; }
             set
             {
                 if (value.Width > 0 && value.Height > 0)
@@ -53,11 +52,13 @@ namespace WillBeEnterprise.iOS.Renderers
 
         private void Paint(GradientButton gradientButton)
         {
-            var gradient = new CAGradientLayer();
-            gradient.CornerRadius = gradientButton.CornerRadius;
-            gradient.Colors = new CGColor[] { gradientButton.StartColor.ToUIColor().CGColor, gradientButton.EndColor.ToUIColor().CGColor};
+            GradientLayer = new CAGradientLayer();
+            GradientLayer.CornerRadius = gradientButton.CornerRadius;
+            GradientLayer.Colors = new CGColor[] { gradientButton.StartColor.ToUIColor().CGColor, gradientButton.EndColor.ToUIColor().CGColor };
+            GradientLayer.StartPoint = new CGPoint(0.0, 0.5);
+            GradientLayer.EndPoint = new CGPoint(1.0, 0.5);
             var layer = Control?.Layer.Sublayers.LastOrDefault();
-            Control?.Layer.InsertSublayerBelow(gradient, layer);
+            Control?.Layer.InsertSublayerBelow(GradientLayer, layer);
         }
     }
 }

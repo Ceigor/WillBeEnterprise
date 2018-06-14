@@ -138,8 +138,14 @@
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>A password is required.</value>
+  </data>
   <data name="SoundPlayer" xml:space="preserve">
     <value>Sound Player</value>
+  </data>
+  <data name="UsernameRequired" xml:space="preserve">
+    <value>A username is required.</value>
   </data>
   <data name="VideoPlayer" xml:space="preserve">
     <value>Video Player</value>

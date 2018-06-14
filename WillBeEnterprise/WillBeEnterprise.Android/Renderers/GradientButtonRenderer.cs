@@ -31,18 +31,18 @@ namespace WillBeEnterprise.Droid.Renderers
         {
             base.OnElementPropertyChanged(sender, args);
             if (ShouldPaint(args.PropertyName))
-                Paint((GradientButton) Element);
+                Paint((GradientButton)Element);
         }
 
         private bool ShouldPaint(string propertyName)
         {
             return (propertyName == GradientButton.StartColorProperty.PropertyName || propertyName == GradientButton.EndColorProperty.PropertyName) &&
                 Element != null;
-          
+
         }
 
         private void Paint(GradientButton gradientButton)
-        { 
+        {
             int[] colors = { gradientButton.StartColor.ToAndroid(), gradientButton.EndColor.ToAndroid() };
             GradientBackground = new GradientDrawable(GradientDrawable.Orientation.LeftRight, colors);
             GradientBackground.SetShape(ShapeType.Rectangle);
