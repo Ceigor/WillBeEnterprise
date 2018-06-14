@@ -16,8 +16,9 @@
         <OnPlatform x:TypeArguments="x:Double" x:Key="LargeFontSize">
             <On Platform="Android,iOS" Value ="20"/>
         </OnPlatform>
-        <OnPlatform x:TypeArguments="x:Double" x:Key="GradientButtonCornerRadius">
-            <On Platform="Android,iOS" Value ="40"/>
+        <OnPlatform x:TypeArguments="x:Int32" x:Key="GradientButtonCornerRadius">
+            <On Platform="Android" Value ="50"/>
+            <On Platform="iOS" Value ="40"/>
         </OnPlatform>
         <Thickness x:Key="SmallThickness">8,8,8,8</Thickness>
         <Thickness x:Key="SmallUpperThickness">0,8,0,0</Thickness>
@@ -51,7 +52,7 @@
             <Setter Property="EndColor" Value="{StaticResource OrangeGradientEndColor}"/>
             <Setter Property="TextColor" Value="White"/>
             <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
-            <Setter Property="CornerRadius" Value="50"/>
+            <Setter Property="CornerRadius" Value="{StaticResource GradientButtonCornerRadius}"/>
             <Style.Triggers>
                 <EventTrigger Event = "Clicked">
                     <triggers:FadingTriggerAction/>
