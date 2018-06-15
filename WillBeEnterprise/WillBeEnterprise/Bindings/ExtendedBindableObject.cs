@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Reflection;
 using Xamarin.Forms;
@@ -10,6 +11,7 @@ namespace WillBeEnterprise.Bindings
         public void RaisePropertyChanged<T>(Expression<Func<T>> property)
         {
             var name = GetMemberInfo(property).Name;
+            Debug.WriteLine("Raising property changed event for name = " + name);
             OnPropertyChanged(name);
         }
 

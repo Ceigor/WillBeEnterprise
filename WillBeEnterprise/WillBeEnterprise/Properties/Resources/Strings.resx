@@ -126,6 +126,9 @@
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>An email  is required.</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -143,9 +146,6 @@
   </data>
   <data name="SoundPlayer" xml:space="preserve">
     <value>Sound Player</value>
-  </data>
-  <data name="UsernameRequired" xml:space="preserve">
-    <value>A username is required.</value>
   </data>
   <data name="VideoPlayer" xml:space="preserve">
     <value>Video Player</value>

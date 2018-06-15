@@ -88,8 +88,10 @@
     <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Effects\EntryLineColorEffect.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\GradientButtonRenderer.cs" />
+    <Compile Include="Renderers\VideoPlayerRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

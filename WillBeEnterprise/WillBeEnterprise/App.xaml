@@ -7,6 +7,7 @@
     <Application.Resources>
         <Color x:Key="OrangeGradientStartColor">#f29304</Color>
         <Color x:Key="OrangeGradientEndColor">#ffd002</Color>
+        <Color x:Key="ErrorColor">#ff5252</Color>
         <OnPlatform x:TypeArguments="x:Double" x:Key="SmallFontSize">
             <On Platform="Android,iOS" Value ="12"/>
         </OnPlatform>
@@ -58,6 +59,13 @@
                     <triggers:FadingTriggerAction/>
                 </EventTrigger>
             </Style.Triggers>
+        </Style>
+        <Style x:Key="ValidationErrorLabelStyle"
+                   TargetType="{x:Type Label}">
+            <Setter Property="TextColor"
+                           Value="{StaticResource ErrorColor}" />
+            <Setter Property="FontSize"
+                           Value="{StaticResource SmallFontSize}" />
         </Style>
     </Application.Resources>
 </Application>

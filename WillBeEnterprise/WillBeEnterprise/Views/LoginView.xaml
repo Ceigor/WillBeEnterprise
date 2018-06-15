@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:extensions ="clr-namespace:WillBeEnterprise.Extensions"
+             xmlns:converters ="clr-namespace:WillBeEnterprise.Converters"
              xmlns:behaviors="clr-namespace:WillBeEnterprise.Behaviors"
              xmlns:customView ="clr-namespace:WillBeEnterprise.Views.Custom"
              xmlns:svg="clr-namespace:WillBeEnterprise.Views.Custom"
@@ -22,17 +23,53 @@
             <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="{StaticResource MediumThickness}" Grid.ColumnSpan="2">
                     <Label Text="{extensions:Translate LoginWith}" HorizontalOptions="StartAndExpand" Style="{StaticResource HeaderStyle}"/>
-                    <Entry Placeholder="{extensions:Translate Email}" HorizontalOptions="FillAndExpand" Text="{Binding Username.Value}"></Entry>
-                    <Entry Placeholder="{extensions:Translate Password}" IsPassword="True" HorizontalOptions="FillAndExpand" Text="{Binding Password.Value}"></Entry>
-                <customView:GradientButton Text="{extensions:Translate Login}" Style="{StaticResource GradientButtonStyle}">
+                    <Entry Placeholder="{extensions:Translate Email}" HorizontalOptions="FillAndExpand" Text="{Binding Email.Value, Mode=TwoWay}">
+                        <Entry.Behaviors>
+                            <behaviors:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateEmailCommand}"/>
+                        </Entry.Behaviors>
+                        <Entry.Triggers>
+                            <DataTrigger
+                                TargetType="Entry"
+                                Binding="{Binding Email.IsValid}"
+                                Value="False">
+                                <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource ErrorColor}"/>
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Label Text="{Binding Email.Error}"
+					Style="{StaticResource ValidationErrorLabelStyle}" />
+                    <Entry Placeholder="{extensions:Translate Password}" IsPassword="True" HorizontalOptions="FillAndExpand" Text="{Binding Password.Value,  Mode=TwoWay}">
+                        <Entry.Behaviors>
+                            <behaviors:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidatePasswordCommand}" />
+                        </Entry.Behaviors>
+                        <Entry.Triggers>
+                            <DataTrigger
+                                TargetType="Entry" Binding="{Binding Password.IsValid}" Value="False">
+                                <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource ErrorColor}"/>
+                            </DataTrigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Label x:Name="Password" Text="{Binding Password.Error}" Style="{StaticResource ValidationErrorLabelStyle}" >
+                        <!--Label.Triggers>
+                            <DataTrigger
+                                TargetType="Entry" Binding="{Binding Source={x:Reference Password}, Path = Text.Length}" Value="0">
+                            <Setter Property="IsVisible" Value="False"/>
+                        </DataTrigger>
+                            <DataTrigger
+                              TargetType="Entry" Binding="{Binding Source={x:Reference Password}, Path = Text.Length}" Value="1">
+                                <Setter Property="IsVisible" Value="True"/>
+                            </DataTrigger>
+                           </-->
+                    </Label> 
+                    <customView:GradientButton Text="{extensions:Translate Login}" Style="{StaticResource GradientButtonStyle}">
                     <Button.Behaviors>
                         <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding LoginCommand}"/>
                     </Button.Behaviors>
                 </customView:GradientButton>
             </StackLayout>
             </ScrollView>
-            <svg:Icon ResourceId="WillBeEnterprise.Properties.Resources.Svgs.facebook.svg" Grid.Row="2" Grid.Column="0"/>
-            <svg:Icon ResourceId="WillBeEnterprise.Properties.Resources.Svgs.linkedin.svg" Grid.Row="2" Grid.Column="1"/>
+            <Image Source="facebook.png" Grid.Row="2" Grid.Column="0"/>
+            <Image Source="linkedin.png" Grid.Row="2" Grid.Column="1"/>
             <Label Text="{extensions:Translate ContinueAsGuestUser}" HorizontalOptions="CenterAndExpand" Margin="{StaticResource SmallUpperThickness}"
                    Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>

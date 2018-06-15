@@ -10,16 +10,22 @@ namespace WillBeEnterprise.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
+        public ICommand ValidateEmailCommand { get; private set; }
+        public ICommand ValidatePasswordCommand { get; private set; }
         public ICommand LoginCommand { get; private set; }
         public IHttpService Service { get; private set; }
-        private ValidatableObject<string> username;
-        public ValidatableObject<string> Username
+        private ValidatableObject<string> email;
+        public ValidatableObject<string> Email
         {
-            get { return username; }
+            get
+            {
+                Debug.WriteLine("Someone is checking Email...");
+                return email;
+            }
             set
             {
-                username = value;
-                RaisePropertyChanged(() => Username);
+                email = value;
+                RaisePropertyChanged(() => Email);
             }
         }
         private ValidatableObject<string> password;
@@ -37,22 +43,43 @@ namespace WillBeEnterprise.ViewModels
         public LoginViewModel(IHttpService service)
         {
             Service = service;
+            ValidateEmailCommand = new Command(() => ValidateEmail());
+            ValidatePasswordCommand = new Command(() => ValidatePassword());
             LoginCommand = new Command(() => Login());
-            username = new ValidatableObject<string>();
-            password = new ValidatableObject<string>();
-            AddValidations();
+            SetValidations();
+        }
+
+        private bool Validate()
+        {
+            return ValidateEmail() && ValidatePassword();
+        }
+
+        private bool ValidateEmail()
+        {
+            Debug.WriteLine("Validating Email...");
+            return email.Validate();
+        }
+
+        private bool ValidatePassword()
+        {
+            Debug.WriteLine("Validating Password...");
+            return password.Validate();
         }
 
         private async Task Login()
         {
-            Debug.WriteLine(string.Format("Bindeded data = {0}, {1}", Username.Value, Password.Value));
+            bool validated = Validate();
+            Debug.WriteLine(string.Format("Bindeded data = {0}, {1}", Email.Value, Password.Value));
+            Debug.WriteLine("Validation Result = " + validated);
 
         }
 
-        private void AddValidations()
+        private void SetValidations()
         {
-            username.Validations.Add(new IsNotNullOrEmptyRule { ValidationMessage = Properties.Resources.Strings.UsernameRequired });
-            password.Validations.Add(new IsNotNullOrEmptyRule { ValidationMessage = Properties.Resources.Strings.PasswordRequired });
+            email = new ValidatableObject<string>();
+            password = new ValidatableObject<string>();
+            email.ValidationRule = new IsNotNullOrEmptyRule { ValidationMessage = Properties.Resources.Strings.EmailRequired };
+            password.ValidationRule = new IsNotNullOrEmptyRule { ValidationMessage = Properties.Resources.Strings.PasswordRequired };
         }
     }
 }

@@ -88,6 +88,15 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An email  is required..
+        /// </summary>
+        internal static string EmailRequired {
+            get {
+                return ResourceManager.GetString("EmailRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string Login {
@@ -138,15 +147,6 @@ namespace WillBeEnterprise.Properties.Resources {
         internal static string SoundPlayer {
             get {
                 return ResourceManager.GetString("SoundPlayer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A username is required..
-        /// </summary>
-        internal static string UsernameRequired {
-            get {
-                return ResourceManager.GetString("UsernameRequired", resourceCulture);
             }
         }
         

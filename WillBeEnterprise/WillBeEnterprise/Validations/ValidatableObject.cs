@@ -1,13 +1,21 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Diagnostics;
 using WillBeEnterprise.Bindings;
 
 namespace WillBeEnterprise.Validations
 {
     public class ValidatableObject<T> : ExtendedBindableObject, IValidity
     {
-        public List<IValidationRule<T>> Validations { get; private set; }
-        private List<string> Errors;
+        public IValidationRule<T> ValidationRule { get; set; }
+        private string error;
+        public string Error
+        {
+            get { return error; }
+            private set
+            {
+                error = value;
+                RaisePropertyChanged(() => Error);
+            }
+        }
         private T value;
         public T Value
         {
@@ -25,24 +33,25 @@ namespace WillBeEnterprise.Validations
             set
             {
                 isValid = value;
-                RaisePropertyChanged(() => isValid);
+                RaisePropertyChanged(() => IsValid);
             }
         }
 
         public ValidatableObject()
         {
             IsValid = true;
-            Errors = new List<string>();
-            Validations = new List<IValidationRule<T>>();
+            Error = string.Empty;
         }
 
         public bool Validate()
         {
-            Errors.Clear();
-            IEnumerable<string> errors = Validations.Where(v => !v.Check(Value))
-                .Select(v => v.ValidationMessage);
-            Errors = errors.ToList();
-            IsValid = !Errors.Any();
+            if (ValidationRule == null)
+                return true;
+            Error = ValidationRule.Check(Value) ? string.Empty : ValidationRule.ValidationMessage;
+            IsValid = Error.Length == 0;
+            Debug.WriteLine("Valid after validation = " + IsValid);
+            if(!IsValid)
+                Debug.WriteLine("Error message = " + Error);
             return IsValid;
         }
     }
