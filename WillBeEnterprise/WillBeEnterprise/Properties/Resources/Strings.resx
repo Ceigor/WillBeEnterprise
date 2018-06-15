@@ -144,6 +144,9 @@
   <data name="PasswordRequired" xml:space="preserve">
     <value>A password is required.</value>
   </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
   <data name="SoundPlayer" xml:space="preserve">
     <value>Sound Player</value>
   </data>

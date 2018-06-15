@@ -17,6 +17,7 @@ namespace WillBeEnterprise.Container
             builder.RegisterType<MainViewModel>();
             builder.RegisterType<LoginViewModel>();
             builder.RegisterType<VideoPlayerViewModel>();
+            builder.RegisterType<SoundPlayerViewModel>();
             container = builder.Build();
         }
 

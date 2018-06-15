@@ -1,16 +1,17 @@
-﻿using System;
-using System.ComponentModel;
-using System.IO;
-
-using AVFoundation;
+﻿using AVFoundation;
 using AVKit;
 using CoreMedia;
 using Foundation;
+using System;
+using System.ComponentModel;
+using System.IO;
 using UIKit;
+using WillBeEnterprise.iOS.Renderers;
 using WillBeEnterprise.Video;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
+[assembly: ExportRenderer(typeof(VideoPlayer), typeof(VideoPlayerRenderer))]
 namespace WillBeEnterprise.iOS.Renderers
 {
     public class VideoPlayerRenderer : ViewRenderer<VideoPlayer, UIView>

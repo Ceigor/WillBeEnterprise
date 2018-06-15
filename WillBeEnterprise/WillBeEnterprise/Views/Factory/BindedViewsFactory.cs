@@ -24,6 +24,8 @@ namespace WillBeEnterprise.Views.Factory
                 return (new LoginView() as View);
             if (typeof(View) == typeof(VideoPlayerView))
                 return (new VideoPlayerView() as View);
+            if (typeof(View) == typeof(SoundPlayerView))
+                return (new SoundPlayerView() as View);
             throw NoSuchViewException.CreateException(typeof(View));
         }
 

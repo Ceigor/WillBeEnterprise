@@ -142,6 +142,15 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Play.
+        /// </summary>
+        internal static string Play {
+            get {
+                return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sound Player.
         /// </summary>
         internal static string SoundPlayer {

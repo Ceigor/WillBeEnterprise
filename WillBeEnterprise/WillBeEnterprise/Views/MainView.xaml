@@ -18,7 +18,11 @@
                     <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToVideoPlayerCommand}"/>
                 </Button.Behaviors>
             </customView:GradientButton>
-            <customView:GradientButton Text="{extensions:Translate SoundPlayer}" Style="{StaticResource GradientButtonStyle}"/>
+            <customView:GradientButton Text="{extensions:Translate SoundPlayer}" Style="{StaticResource GradientButtonStyle}">
+                <Button.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToSoundPlayerCommand}"/>
+                </Button.Behaviors>
+            </customView:GradientButton>
         </StackLayout>
     </ScrollView>
 </ContentPage>
