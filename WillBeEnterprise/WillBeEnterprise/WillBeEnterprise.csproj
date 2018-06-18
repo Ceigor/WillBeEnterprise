@@ -29,7 +29,6 @@
   <ItemGroup>
     <Folder Include="Animations\" />
     <Folder Include="Converters\" />
-    <Folder Include="Sound\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,8 +45,8 @@
     <Compile Update="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\SoundPlayerView.xaml.cs">
-      <DependentUpon>SoundPlayerView.xaml</DependentUpon>
+    <Compile Update="Views\AudioPlayerView.xaml.cs">
+      <DependentUpon>AudioPlayerView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -66,7 +65,7 @@
     <EmbeddedResource Update="Views\MenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SoundPlayerView.xaml">
+    <EmbeddedResource Update="Views\AudioPlayerView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\VideoPlayerView.xaml">

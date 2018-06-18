@@ -70,6 +70,15 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Audio Player.
+        /// </summary>
+        internal static string AudioPlayer {
+            get {
+                return ResourceManager.GetString("AudioPlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Continue as a Guest User.
         /// </summary>
         internal static string ContinueAsGuestUser {
@@ -147,15 +156,6 @@ namespace WillBeEnterprise.Properties.Resources {
         internal static string Play {
             get {
                 return ResourceManager.GetString("Play", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sound Player.
-        /// </summary>
-        internal static string SoundPlayer {
-            get {
-                return ResourceManager.GetString("SoundPlayer", resourceCulture);
             }
         }
         

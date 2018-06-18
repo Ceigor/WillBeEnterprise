@@ -15,7 +15,7 @@ namespace WillBeEnterprise.ViewModels
         {
             NavigateToLoginCommand = new Command(async() => await navigationService.NavigateToAsync<LoginView, LoginViewModel>());
             NavigateToVideoPlayerCommand = new Command(async() => await navigationService.NavigateToAsync<VideoPlayerView, VideoPlayerViewModel>());
-            NavigateToSoundPlayerCommand = new Command(async () => await navigationService.NavigateToAsync<SoundPlayerView, SoundPlayerViewModel>());
+            NavigateToSoundPlayerCommand = new Command(async () => await navigationService.NavigateToAsync<AudioPlayerView, AudioPlayerViewModel>());
         }
 
     }

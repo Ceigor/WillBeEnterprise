@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customView ="clr-namespace:WillBeEnterprise.Views.Custom"
+              xmlns:extensions ="clr-namespace:WillBeEnterprise.Extensions"
+             xmlns:behaviors="clr-namespace:WillBeEnterprise.Behaviors"
+             x:Class="WillBeEnterprise.Views.AudioPlayerView">
+    <ContentPage.Content>
+        <StackLayout>
+            <customView:GradientButton Text="{Binding CommandText}" Style="{StaticResource GradientButtonStyle}" Command="{Binding PlayPauseCommand}">
+            </customView:GradientButton>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

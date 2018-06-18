@@ -120,6 +120,9 @@
   <data name="AppName" xml:space="preserve">
     <value>WillBeEnterprise</value>
   </data>
+  <data name="AudioPlayer" xml:space="preserve">
+    <value>Audio Player</value>
+  </data>
   <data name="ContinueAsGuestUser" xml:space="preserve">
     <value>Continue as a Guest User</value>
   </data>
@@ -146,9 +149,6 @@
   </data>
   <data name="Play" xml:space="preserve">
     <value>Play</value>
-  </data>
-  <data name="SoundPlayer" xml:space="preserve">
-    <value>Sound Player</value>
   </data>
   <data name="VideoPlayer" xml:space="preserve">
     <value>Video Player</value>
