@@ -123,14 +123,29 @@
   <data name="AudioPlayer" xml:space="preserve">
     <value>Audio Player</value>
   </data>
+  <data name="ChartsDemo" xml:space="preserve">
+    <value>Charts Demo</value>
+  </data>
   <data name="ContinueAsGuestUser" xml:space="preserve">
     <value>Continue as a Guest User</value>
+  </data>
+  <data name="CustomerService" xml:space="preserve">
+    <value>Customer Service</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>An email  is required.</value>
+  </data>
+  <data name="FifteenMinutes" xml:space="preserve">
+    <value>15 Minutes</value>
+  </data>
+  <data name="Hospitality" xml:space="preserve">
+    <value>Hospitality</value>
+  </data>
+  <data name="ImprovementAreasQuestion" xml:space="preserve">
+    <value>What do you want to improve your Business skills in English for?</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
@@ -149,6 +164,24 @@
   </data>
   <data name="Play" xml:space="preserve">
     <value>Play</value>
+  </data>
+  <data name="SalesAndMarketing" xml:space="preserve">
+    <value>Sales &amp; Marketing</value>
+  </data>
+  <data name="SetGoal" xml:space="preserve">
+    <value>Set your goal</value>
+  </data>
+  <data name="SoftwareDevelopment" xml:space="preserve">
+    <value>Software Development</value>
+  </data>
+  <data name="TenMinutes" xml:space="preserve">
+    <value>10 Minutes</value>
+  </data>
+  <data name="TimeCommitmentQuestion" xml:space="preserve">
+    <value>How much time can you spend daily?</value>
+  </data>
+  <data name="TwentyMinutes" xml:space="preserve">
+    <value>20 Minutes</value>
   </data>
   <data name="VideoPlayer" xml:space="preserve">
     <value>Video Player</value>

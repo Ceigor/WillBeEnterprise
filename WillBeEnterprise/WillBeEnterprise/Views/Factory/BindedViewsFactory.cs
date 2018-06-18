@@ -22,10 +22,16 @@ namespace WillBeEnterprise.Views.Factory
                 return (new MainView() as View);
             if (typeof(View) == typeof(LoginView))
                 return (new LoginView() as View);
+            if (typeof(View) == typeof(SetYourGoalView))
+                return (new SetYourGoalView() as View);
+            if (typeof(View) == typeof(SetYourGoalFirstView))
+                return (new SetYourGoalFirstView() as View);
             if (typeof(View) == typeof(VideoPlayerView))
                 return (new VideoPlayerView() as View);
             if (typeof(View) == typeof(AudioPlayerView))
                 return (new AudioPlayerView() as View);
+            if (typeof(View) == typeof(ChartsView))
+                return (new ChartsView() as View);
             throw NoSuchViewException.CreateException(typeof(View));
         }
 

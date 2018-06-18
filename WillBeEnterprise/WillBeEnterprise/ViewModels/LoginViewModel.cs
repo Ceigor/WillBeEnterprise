@@ -4,6 +4,7 @@ using System.Windows.Input;
 using WillBeEnterprise.Services.Http;
 using WillBeEnterprise.Validations;
 using WillBeEnterprise.ViewModels.Base;
+using WillBeEnterprise.Views;
 using Xamarin.Forms;
 
 namespace WillBeEnterprise.ViewModels
@@ -45,7 +46,7 @@ namespace WillBeEnterprise.ViewModels
             Service = service;
             ValidateEmailCommand = new Command(() => ValidateEmail());
             ValidatePasswordCommand = new Command(() => ValidatePassword());
-            LoginCommand = new Command(() => Login());
+            LoginCommand = new Command(async () => await Login());
             SetValidations();
         }
 
@@ -71,7 +72,8 @@ namespace WillBeEnterprise.ViewModels
             bool validated = Validate();
             Debug.WriteLine(string.Format("Bindeded data = {0}, {1}", Email.Value, Password.Value));
             Debug.WriteLine("Validation Result = " + validated);
-
+            if (validated)
+                await navigationService.NavigateToAsync<SetYourGoalFirstView, SetYourGoalViewModel>();
         }
 
         private void SetValidations()

@@ -16,8 +16,10 @@ namespace WillBeEnterprise.Container
             builder.RegisterType<HttpService>().As<IHttpService>();
             builder.RegisterType<MainViewModel>();
             builder.RegisterType<LoginViewModel>();
+            builder.RegisterType<SetYourGoalViewModel>();
             builder.RegisterType<VideoPlayerViewModel>();
             builder.RegisterType<AudioPlayerViewModel>();
+            builder.RegisterType<ChartsViewModel>();
             container = builder.Build();
         }
 

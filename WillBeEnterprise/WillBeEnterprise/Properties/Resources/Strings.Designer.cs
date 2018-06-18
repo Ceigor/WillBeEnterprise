@@ -79,11 +79,29 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Charts Demo.
+        /// </summary>
+        internal static string ChartsDemo {
+            get {
+                return ResourceManager.GetString("ChartsDemo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Continue as a Guest User.
         /// </summary>
         internal static string ContinueAsGuestUser {
             get {
                 return ResourceManager.GetString("ContinueAsGuestUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customer Service.
+        /// </summary>
+        internal static string CustomerService {
+            get {
+                return ResourceManager.GetString("CustomerService", resourceCulture);
             }
         }
         
@@ -102,6 +120,33 @@ namespace WillBeEnterprise.Properties.Resources {
         internal static string EmailRequired {
             get {
                 return ResourceManager.GetString("EmailRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 15 Minutes.
+        /// </summary>
+        internal static string FifteenMinutes {
+            get {
+                return ResourceManager.GetString("FifteenMinutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hospitality.
+        /// </summary>
+        internal static string Hospitality {
+            get {
+                return ResourceManager.GetString("Hospitality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to What do you want to improve your Business skills in English for?.
+        /// </summary>
+        internal static string ImprovementAreasQuestion {
+            get {
+                return ResourceManager.GetString("ImprovementAreasQuestion", resourceCulture);
             }
         }
         
@@ -156,6 +201,60 @@ namespace WillBeEnterprise.Properties.Resources {
         internal static string Play {
             get {
                 return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sales &amp; Marketing.
+        /// </summary>
+        internal static string SalesAndMarketing {
+            get {
+                return ResourceManager.GetString("SalesAndMarketing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set your goal.
+        /// </summary>
+        internal static string SetGoal {
+            get {
+                return ResourceManager.GetString("SetGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Software Development.
+        /// </summary>
+        internal static string SoftwareDevelopment {
+            get {
+                return ResourceManager.GetString("SoftwareDevelopment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10 Minutes.
+        /// </summary>
+        internal static string TenMinutes {
+            get {
+                return ResourceManager.GetString("TenMinutes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How much time can you spend daily?.
+        /// </summary>
+        internal static string TimeCommitmentQuestion {
+            get {
+                return ResourceManager.GetString("TimeCommitmentQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 20 Minutes.
+        /// </summary>
+        internal static string TwentyMinutes {
+            get {
+                return ResourceManager.GetString("TwentyMinutes", resourceCulture);
             }
         }
         

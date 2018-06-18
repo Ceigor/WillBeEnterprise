@@ -10,7 +10,7 @@ namespace WillBeEnterprise.Services.Navigation
     {
        
         public async Task NavigateToAsync<View, ViewModel>()
-            where View : ContentPage
+            where View : Page
             where ViewModel : BaseViewModel
         {
             View page = BindedViewsFactory.CreateBindedView<View, ViewModel>();

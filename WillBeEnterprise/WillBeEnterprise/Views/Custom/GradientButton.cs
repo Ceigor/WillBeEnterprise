@@ -16,5 +16,6 @@ namespace WillBeEnterprise.Views.Custom
             get { return (Color)GetValue(EndColorProperty);}
             set { SetValue(EndColorProperty, value);}
         }
+
     }
 }

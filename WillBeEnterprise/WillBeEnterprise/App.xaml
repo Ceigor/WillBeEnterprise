@@ -5,6 +5,7 @@
              xmlns:customView ="clr-namespace:WillBeEnterprise.Views.Custom"
              x:Class="WillBeEnterprise.App">
     <Application.Resources>
+        <Color x:Key="ChartsBackground">#2753DE</Color>
         <Color x:Key="OrangeGradientStartColor">#f29304</Color>
         <Color x:Key="OrangeGradientEndColor">#ffd002</Color>
         <Color x:Key="ErrorColor">#ff5252</Color>
@@ -21,6 +22,10 @@
             <On Platform="Android" Value ="50"/>
             <On Platform="iOS" Value ="40"/>
         </OnPlatform>
+        <OnPlatform x:TypeArguments="x:Double" x:Key="ArrowButtonSize">
+            <On Platform="iOS" Value ="100"/>
+            <On Platform="Android" Value="100"/>
+        </OnPlatform>
         <Thickness x:Key="SmallThickness">8,8,8,8</Thickness>
         <Thickness x:Key="SmallUpperThickness">0,8,0,0</Thickness>
         <Thickness x:Key="SmallUpperLowerThickness">0,8,0,8</Thickness>
@@ -34,6 +39,10 @@
         <Style x:Key="HeaderStyle" TargetType="Label">
             <Setter Property="TextColor" Value="Black"/>
             <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
+        </Style>
+        <Style x:Key="DescriptionStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="#000e23"/>
+            <Setter Property="FontSize" Value="{StaticResource MediumFontSize}"/>
         </Style>
         <Style x:Key="MainButtonStyle" TargetType="Button">
             <Setter Property="BackgroundColor" Value="#91abd6"/>
@@ -52,6 +61,29 @@
             <Setter Property="StartColor" Value="{StaticResource OrangeGradientStartColor}"/>
             <Setter Property="EndColor" Value="{StaticResource OrangeGradientEndColor}"/>
             <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
+            <Setter Property="CornerRadius" Value="{StaticResource GradientButtonCornerRadius}"/>
+            <Style.Triggers>
+                <EventTrigger Event = "Clicked">
+                    <triggers:FadingTriggerAction/>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="GradientArrowButtonStyle" TargetType="customView:GradientButton">
+            <Setter Property="StartColor" Value="{StaticResource OrangeGradientStartColor}"/>
+            <Setter Property="EndColor" Value="{StaticResource OrangeGradientEndColor}"/>
+            <Setter Property="WidthRequest" Value="{StaticResource ArrowButtonSize}"/>
+            <Setter Property="HeightRequest" Value="{StaticResource ArrowButtonSize}"/>
+            <Setter Property="Image" Value="arrow.png"/>
+            <Setter Property="CornerRadius" Value="{StaticResource GradientButtonCornerRadius}"/>
+            <Style.Triggers>
+                <EventTrigger Event = "Clicked">
+                    <triggers:FadingTriggerAction/>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SelectButtonStyle" TargetType="customView:GradientButton">
+            <Setter Property="TextColor" Value="#000e23"/>
             <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
             <Setter Property="CornerRadius" Value="{StaticResource GradientButtonCornerRadius}"/>
             <Style.Triggers>

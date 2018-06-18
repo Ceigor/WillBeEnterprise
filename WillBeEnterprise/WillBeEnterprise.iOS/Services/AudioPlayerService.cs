@@ -8,6 +8,7 @@ namespace WillBeEnterprise.iOS.Services
     public class AudioPlayerService : IAudioPlayerService
     {
         private AVAudioPlayer _audioPlayer;
+        private AVPlayer _avPlayer;
 
         public Action OnFinishedPlaying { get; set; }
 

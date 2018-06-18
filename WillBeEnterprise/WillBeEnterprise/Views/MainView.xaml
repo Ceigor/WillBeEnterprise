@@ -8,10 +8,7 @@
              Title="WillBeEnterprise">
     <ScrollView>
         <StackLayout>
-            <customView:GradientButton Text="{extensions:Translate MockedApp}" Style="{StaticResource GradientButtonStyle}">
-                <Button.Behaviors>
-                    <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToLoginCommand}"/>
-                </Button.Behaviors>
+            <customView:GradientButton Text="{extensions:Translate MockedApp}" Style="{StaticResource GradientButtonStyle}" Command="{Binding NavigateToLoginCommand}">
             </customView:GradientButton>
             <customView:GradientButton Text="{extensions:Translate VideoPlayer}" Style="{StaticResource GradientButtonStyle}">
                 <Button.Behaviors>
@@ -23,6 +20,7 @@
                     <behaviors:EventToCommandBehavior EventName="Clicked" Command="{Binding NavigateToSoundPlayerCommand}"/>
                 </Button.Behaviors>
             </customView:GradientButton>
+            <customView:GradientButton Text="{extensions:Translate ChartsDemo}" Style="{StaticResource GradientButtonStyle}" Command="{Binding NavigateToChartsCommand}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
