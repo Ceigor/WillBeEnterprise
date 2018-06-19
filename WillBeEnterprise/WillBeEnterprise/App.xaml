@@ -74,20 +74,14 @@
                 </EventTrigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="GradientCheckBoxStyle" TargetType="customView:GradientCheckBox">
+        <Style x:Key="SelectStyle" TargetType="customView:Select">
+            <Setter Property="BackgroundColor" Value="#f4f6f9"/>
             <Setter Property="TextColor" Value="#000e23"/>
-            <Setter Property="CheckedTextColor" Value="White"/>
-            <Setter Property="CheckedBackgroundStartColor" Value="#034aa0"/>
-            <Setter Property="CheckedBackgroundEndColor" Value="#237dea"/>
+            <Setter Property="SelectedTextColor" Value="White"/>
+            <Setter Property="SelectedStartColor" Value="#034aa0"/>
+            <Setter Property="SelectedEndColor" Value="#237dea"/>
             <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
             <Setter Property="CornerRadius" Value="{StaticResource GradientButtonCornerRadius}"/>
-        </Style>
-        <Style x:Key="CheckBoxStyle" TargetType="customView:CheckBox">
-            <Setter Property="OutlineColor" Value="#000e23"/>
-            <Setter Property="InnerColor" Value="White"/>
-            <Setter Property="CheckedOutlineColor" Value="#000e23"/>
-            <Setter Property="CheckedInnerColor" Value="White"/>
-            <Setter Property="CheckColor" Value="#000e23"/>
         </Style>
         <Style x:Key="GradientArrowButtonStyle" TargetType="customView:GradientButton">
             <Setter Property="StartColor" Value="{StaticResource OrangeGradientStartColor}"/>
@@ -113,16 +107,6 @@
             <Setter Property="HeightRequest" Value="{StaticResource ArrowButtonSize}"/>
             <Setter Property="CornerRadius" Value="{StaticResource ArrowButtonCornerRadius}"/>
             <Setter Property="Icon" Value="arrow.png"/>
-            <Style.Triggers>
-                <EventTrigger Event = "Clicked">
-                    <triggers:FadingTriggerAction/>
-                </EventTrigger>
-            </Style.Triggers>
-        </Style>
-        <Style x:Key="SelectButtonStyle" TargetType="customView:GradientButton">
-            <Setter Property="TextColor" Value="#000e23"/>
-            <Setter Property="FontSize" Value="{StaticResource LargeFontSize}"/>
-            <Setter Property="CornerRadius" Value="{StaticResource GradientButtonCornerRadius}"/>
             <Style.Triggers>
                 <EventTrigger Event = "Clicked">
                     <triggers:FadingTriggerAction/>

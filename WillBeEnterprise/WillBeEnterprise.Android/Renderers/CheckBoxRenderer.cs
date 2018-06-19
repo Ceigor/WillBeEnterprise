@@ -65,7 +65,7 @@ namespace WillBeEnterprise.Droid.Renderers
                     {
                         var backgroundColor = GetBackgroundColorStateList(Element.OutlineColor);
                         checkBox.SupportButtonTintList = backgroundColor;
-                        checkBox.BackgroundTintList = GetBackgroundColorStateList(Element.InnerColor);
+                        //checkBox.BackgroundTintList = GetBackgroundColorStateList(Element.InnerColor);
                         //checkBox.ForegroundTintList = GetBackgroundColorStateList(Element.OutlineColor);
 
                     }
@@ -89,6 +89,7 @@ namespace WillBeEnterprise.Droid.Renderers
             {
                 var backgroundColor = GetBackgroundColorStateList(Element.CheckColor);
                 Control.SupportButtonTintList = backgroundColor;
+                //
                 Control.BackgroundTintList = GetBackgroundColorStateList(Element.InnerColor);
                 //Control.ForegroundTintList = GetBackgroundColorStateList(Element.OutlineColor);
             }

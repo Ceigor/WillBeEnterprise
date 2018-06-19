@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\SelectRenderer.cs" />
     <Compile Include="Renderers\GradientButtonRenderer.cs" />
     <Compile Include="Renderers\VideoPlayerRenderer.cs" />
     <Compile Include="Services\AudioPlayerService.cs" />
