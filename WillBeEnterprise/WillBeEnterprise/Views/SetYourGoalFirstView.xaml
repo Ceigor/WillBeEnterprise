@@ -22,14 +22,16 @@
                    Grid.Row="0" Grid.Column="1"></Label>
             <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="{StaticResource MediumThickness}" Grid.ColumnSpan="2">
-                    <customView:GradientButton Text="{extensions:Translate CustomerService}" Style="{StaticResource SelectButtonStyle}" 
-                                       HorizontalOptions="CenterAndExpand"/>
-                    <customView:GradientButton Text="{extensions:Translate SoftwareDevelopment}" Style="{StaticResource SelectButtonStyle}"
-                                    HorizontalOptions="CenterAndExpand"/>
-                    <customView:GradientButton Text="{extensions:Translate SalesAndMarketing}" Style="{StaticResource SelectButtonStyle}"
-                                    HorizontalOptions="CenterAndExpand"/>
-                    <customView:GradientButton Text="{extensions:Translate Hospitality}" Style="{StaticResource SelectButtonStyle}"
-                                    HorizontalOptions="CenterAndExpand"/>
+                    <customView:GradientCheckBox Text="{extensions:Translate CustomerService}" Style="{StaticResource GradientCheckBoxStyle}" 
+                                       HorizontalOptions="FillAndExpand"/>
+                    <customView:GradientCheckBox Text="{extensions:Translate SoftwareDevelopment}}" Style="{StaticResource GradientCheckBoxStyle}" 
+                                       HorizontalOptions="FillAndExpand"/>
+                    <customView:GradientCheckBox Text="{extensions:Translate SalesAndMarketing}" Style="{StaticResource GradientCheckBoxStyle}" 
+                                       HorizontalOptions="FillAndExpand"/>
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                        <customView:CheckBox Style="{StaticResource CheckBoxStyle}" />
+                        <Label Style="{StaticResource DescriptionStyle}" Text="{extensions:Translate Hospitality}"></Label>
+                    </StackLayout>
                 </StackLayout>
             </ScrollView>
             <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">

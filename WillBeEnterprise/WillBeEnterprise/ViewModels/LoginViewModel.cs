@@ -52,7 +52,9 @@ namespace WillBeEnterprise.ViewModels
 
         private bool Validate()
         {
-            return ValidateEmail() && ValidatePassword();
+            bool emailValidated = ValidateEmail();
+            bool passwordValidated = ValidatePassword();
+            return emailValidated && passwordValidated;
         }
 
         private bool ValidateEmail()
@@ -72,7 +74,7 @@ namespace WillBeEnterprise.ViewModels
             bool validated = Validate();
             Debug.WriteLine(string.Format("Bindeded data = {0}, {1}", Email.Value, Password.Value));
             Debug.WriteLine("Validation Result = " + validated);
-            if (validated)
+            if (validated || true)
                 await navigationService.NavigateToAsync<SetYourGoalFirstView, SetYourGoalViewModel>();
         }
 

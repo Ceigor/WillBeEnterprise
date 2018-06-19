@@ -11,7 +11,7 @@ namespace WillBeEnterprise.Droid.Renderers
     public class GradientButtonRenderer : ButtonRenderer
     {
 
-        private GradientDrawable GradientBackground;
+        private GradientDrawable _gradientBackground;
 
         public GradientButtonRenderer(Context context) : base(context)
         {
@@ -44,10 +44,10 @@ namespace WillBeEnterprise.Droid.Renderers
         private void Paint(GradientButton gradientButton)
         {
             int[] colors = { gradientButton.StartColor.ToAndroid(), gradientButton.EndColor.ToAndroid() };
-            GradientBackground = new GradientDrawable(GradientDrawable.Orientation.LeftRight, colors);
-            GradientBackground.SetShape(ShapeType.Rectangle);
-            GradientBackground.SetCornerRadius(gradientButton.CornerRadius);
-            Control.SetBackground(GradientBackground);
+            _gradientBackground = new GradientDrawable(GradientDrawable.Orientation.LeftRight, colors);
+            _gradientBackground.SetShape(ShapeType.Rectangle);
+            _gradientBackground.SetCornerRadius(gradientButton.CornerRadius);
+            Control.SetBackground(_gradientBackground);
         }
 
     }
