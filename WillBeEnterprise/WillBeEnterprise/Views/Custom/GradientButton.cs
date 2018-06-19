@@ -16,6 +16,12 @@ namespace WillBeEnterprise.Views.Custom
             get { return (Color)GetValue(EndColorProperty);}
             set { SetValue(EndColorProperty, value);}
         }
+        public static readonly BindableProperty IconProperty = BindableProperty.Create(nameof(Icon), typeof(FileImageSource), typeof(GradientButton), null);
+        public FileImageSource Icon
+        {
+            get { return (FileImageSource)GetValue(IconProperty); }
+            set { SetValue(IconProperty, value); }
+        }
 
     }
 }
