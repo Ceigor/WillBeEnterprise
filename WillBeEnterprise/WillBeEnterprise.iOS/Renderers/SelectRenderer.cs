@@ -71,7 +71,8 @@ namespace WillBeEnterprise.iOS.Renderers
             GradientLayer.StartPoint = new CGPoint(0.0, 0.5);
             GradientLayer.EndPoint = new CGPoint(1.0, 0.5);
             var layer = Control?.Layer.Sublayers.LastOrDefault();
-            Control?.Layer.InsertSublayerBelow(GradientLayer, layer);
+            Control?.Layer.Sublayers?[0].RemoveFromSuperLayer();
+            Control?.Layer.InsertSublayer(GradientLayer, 0);
         }
     }
 }

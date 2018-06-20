@@ -55,8 +55,7 @@ namespace WillBeEnterprise.Droid.Renderers
             }
             else
             {
-                _gradientBackground = new GradientDrawable(GradientDrawable.Orientation.LeftRight, 
-                    new int[]{select.BackgroundColor.ToAndroid(), select.BackgroundColor.ToAndroid()});
+                _gradientBackground = new GradientDrawable();
                 Control.SetTextColor(select.TextColor.ToAndroid());
             }
             _gradientBackground.SetShape(ShapeType.Rectangle);

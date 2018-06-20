@@ -75,7 +75,7 @@
             </Style.Triggers>
         </Style>
         <Style x:Key="SelectStyle" TargetType="customView:Select">
-            <Setter Property="BackgroundColor" Value="#f4f6f9"/>
+            <Setter Property="BackgroundColor" Value="White"/>
             <Setter Property="TextColor" Value="#000e23"/>
             <Setter Property="SelectedTextColor" Value="White"/>
             <Setter Property="SelectedStartColor" Value="#034aa0"/>
