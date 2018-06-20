@@ -88,6 +88,15 @@ namespace WillBeEnterprise.Properties.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Continue.
+        /// </summary>
+        internal static string Continue {
+            get {
+                return ResourceManager.GetString("Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Continue as a Guest User.
         /// </summary>
         internal static string ContinueAsGuestUser {

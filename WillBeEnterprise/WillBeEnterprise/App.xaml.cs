@@ -13,7 +13,7 @@ namespace WillBeEnterprise
 		public App ()
 		{
 			InitializeComponent();
-            var mainView = BindedViewsFactory.CreateBindedView<MainView, MainViewModel>();
+            var mainView = ViewsFactory.CreateBindedView<MainView, MainViewModel>();
             Debug.WriteLine("MainPage is of type = " + mainView);
             MainPage = new NavigationPage(mainView);
 		}

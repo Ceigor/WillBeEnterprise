@@ -2,7 +2,7 @@
 
 namespace WillBeEnterprise.ViewModels
 {
-    public class SetYourGoalViewModel : BaseViewModel
+    public class MasteryViewModel : BaseViewModel
     {
     }
 }

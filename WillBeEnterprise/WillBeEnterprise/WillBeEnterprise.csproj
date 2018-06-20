@@ -50,6 +50,12 @@
     <Compile Update="Views\AudioPlayerView.xaml.cs">
       <DependentUpon>AudioPlayerView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\SetYourGoalMultipleChoiceView.xaml.cs">
+      <DependentUpon>SetYourGoalMultipleChoiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SetYourGoalSingleChoiceView.xaml.cs">
+      <DependentUpon>SetYourGoalSingleChoiceView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -67,19 +73,19 @@
     <EmbeddedResource Update="Views\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\MasteryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\MenuView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\AudioPlayerView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SetYourGoalFirstView.xaml">
+    <EmbeddedResource Update="Views\SetYourGoalMultipleChoiceView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\SetYourGoalSecondView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SetYourGoalView.xaml">
+    <EmbeddedResource Update="Views\SetYourGoalSingleChoiceView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\VideoPlayerView.xaml">

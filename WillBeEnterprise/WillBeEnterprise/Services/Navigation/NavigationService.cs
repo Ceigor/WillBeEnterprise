@@ -8,12 +8,20 @@ namespace WillBeEnterprise.Services.Navigation
 {
     public class NavigationService : INavigationService
     {
-       
+        public async Task NavigateToAsync<View, ViewModel>(ViewModel viewModel)
+           where View : Page
+           where ViewModel : BaseViewModel
+        {
+            View page = ViewsFactory.CreateView<View>();
+            page.BindingContext = viewModel;
+            await GetMainPage().PushAsync(page);
+        }
+
         public async Task NavigateToAsync<View, ViewModel>()
             where View : Page
             where ViewModel : BaseViewModel
         {
-            View page = BindedViewsFactory.CreateBindedView<View, ViewModel>();
+            View page = ViewsFactory.CreateBindedView<View, ViewModel>();
             await GetMainPage().PushAsync(page);
         }
 

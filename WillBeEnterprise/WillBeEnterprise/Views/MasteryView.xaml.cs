@@ -10,14 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace WillBeEnterprise.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SetYourGoalView : CarouselPage
+	public partial class MasteryView : ContentPage
 	{
-		public SetYourGoalView ()
+		public MasteryView ()
 		{
 			InitializeComponent ();
 		}
-
-       
-
-    }
+	}
 }

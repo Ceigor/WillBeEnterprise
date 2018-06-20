@@ -126,6 +126,9 @@
   <data name="ChartsDemo" xml:space="preserve">
     <value>Charts Demo</value>
   </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
   <data name="ContinueAsGuestUser" xml:space="preserve">
     <value>Continue as a Guest User</value>
   </data>

@@ -75,7 +75,7 @@ namespace WillBeEnterprise.ViewModels
             Debug.WriteLine(string.Format("Bindeded data = {0}, {1}", Email.Value, Password.Value));
             Debug.WriteLine("Validation Result = " + validated);
             if (validated || true)
-                await navigationService.NavigateToAsync<SetYourGoalFirstView, SetYourGoalViewModel>();
+                await navigationService.NavigateToAsync<SetYourGoalMultipleChoiceView, MultipleChoiceViewModel>();
         }
 
         private void SetValidations()

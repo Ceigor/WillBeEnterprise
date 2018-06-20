@@ -4,8 +4,7 @@
              xmlns:extensions="clr-namespace:WillBeEnterprise.Extensions"
              xmlns:customView ="clr-namespace:WillBeEnterprise.Views.Custom"
              Title="{extensions:Translate SetGoal}"
-             xmlns:flex="clr-namespace:Flex.Controls;assembly=Flex"
-             x:Class="WillBeEnterprise.Views.SetYourGoalFirstView">
+             x:Class="WillBeEnterprise.Views.SetYourGoalSingleChoiceView">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -17,25 +16,27 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-        <Image Source="consultant.png" Grid.Row="0" Grid.Column="0"></Image>
-            <Label Style="{StaticResource DescriptionStyle}" Text="{extensions:Translate ImprovementAreasQuestion}" VerticalTextAlignment="Center"
+            <Image Source="consultant.png" Grid.Row="0" Grid.Column="0"></Image>
+            <Label Style="{StaticResource DescriptionStyle}" Text="{extensions:Translate TimeCommitmentQuestion}" VerticalTextAlignment="Center"
                    Grid.Row="0" Grid.Column="1"></Label>
             <ScrollView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="{StaticResource MediumThickness}" Grid.ColumnSpan="2">
-                    <customView:Select Text="{extensions:Translate CustomerService}" Style="{StaticResource SelectStyle}" 
+                    <customView:Select Text="{extensions:Translate TenMinutes}" Style="{StaticResource SelectStyle}" Selected="{Binding FirstSelected}"
+                                       Command="{Binding FirstChangedCommand}"
                                        HorizontalOptions="FillAndExpand"/>
-                    <customView:Select Text="{extensions:Translate SoftwareDevelopment}}" Style="{StaticResource SelectStyle}" 
+                    <customView:Select Text="{extensions:Translate FifteenMinutes}" Style="{StaticResource SelectStyle}" Selected="{Binding SecondSelected}"
+                                       Command="{Binding SecondChangedCommand}"
                                        HorizontalOptions="FillAndExpand"/>
-                    <customView:Select Text="{extensions:Translate SalesAndMarketing}" Style="{StaticResource SelectStyle}" 
-                                       HorizontalOptions="FillAndExpand"/>
-                    <customView:Select Text="{extensions:Translate Hospitality}" Style="{StaticResource SelectStyle}" 
+                    <customView:Select Text="{extensions:Translate TwentyMinutes}" Style="{StaticResource SelectStyle}" Selected="{Binding ThirthSelected}" 
+                                       Command="{Binding ThirthChangedCommand}"
                                        HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
             </ScrollView>
             <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                <flex:FlexButton Style="{StaticResource FlexArrowButtonStyle}"  HorizontalOptions="Center" 
+                <customView:GradientButton Text="{extensions:Translate Continue}" Style="{StaticResource GradientButtonStyle}" HorizontalOptions="Center" 
+                                           IsVisible="{Binding NextPageEnabled}" Command="{Binding NextPageCommand}"
                                  AbsoluteLayout.LayoutFlags="PositionProportional"  AbsoluteLayout.LayoutBounds="0.95,0.95,-1,-1"/>
-        </AbsoluteLayout>
+            </AbsoluteLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
