@@ -12,8 +12,6 @@ namespace WillBeEnterprise.iOS.Renderers
 {
     public class SelectRenderer : ButtonRenderer
     {
-        private CAGradientLayer GradientLayer;
-
         public override CGRect Frame
         {
             get { return base.Frame; }
@@ -56,23 +54,52 @@ namespace WillBeEnterprise.iOS.Renderers
 
         private void Paint(Select select)
         {
-            GradientLayer = new CAGradientLayer();
-            GradientLayer.CornerRadius = select.CornerRadius;
+            var layer = Control?.Layer.Sublayers[0] as CAGradientLayer;
+            if (layer == null)
+            {
+                var gradientLayer = GetCAGradientLayer(select);
+                Control?.Layer.InsertSublayer(gradientLayer, 0);
+                SetTextColor(select);
+            }
+            else
+            {
+                layer.Colors = GetColors(select);
+                SetTextColor(select);
+            }
+
+        }
+
+        private CAGradientLayer GetCAGradientLayer(Select select)
+        {
+            var gradientLayer = new CAGradientLayer();
+            gradientLayer.CornerRadius = select.CornerRadius;
+            gradientLayer.Colors = GetColors(select);
+            gradientLayer.StartPoint = new CGPoint(0.0, 0.5);
+            gradientLayer.EndPoint = new CGPoint(1.0, 0.5);
+            return gradientLayer;
+        }
+
+        private CGColor[] GetColors(Select select)
+        {
             if (select.Selected)
             {
-                GradientLayer.Colors = new CGColor[] { select.SelectedStartColor.ToUIColor().CGColor, select.SelectedEndColor.ToUIColor().CGColor };
+                return new CGColor[] { select.SelectedStartColor.ToUIColor().CGColor, select.SelectedEndColor.ToUIColor().CGColor };
+
+            }
+            return new CGColor[] { select.BackgroundColor.ToUIColor().CGColor, select.BackgroundColor.ToUIColor().CGColor };
+
+        }
+
+        private void SetTextColor(Select select)
+        {
+            if(select.Selected)
+            {
                 Control?.SetTitleColor(select.SelectedTextColor.ToUIColor(), UIControlState.Normal);
             }
             else
             {
-                GradientLayer.Colors = new CGColor[] { select.BackgroundColor.ToUIColor().CGColor, select.BackgroundColor.ToUIColor().CGColor };
                 Control?.SetTitleColor(select.TextColor.ToUIColor(), UIControlState.Normal);
             }
-            GradientLayer.StartPoint = new CGPoint(0.0, 0.5);
-            GradientLayer.EndPoint = new CGPoint(1.0, 0.5);
-            var layer = Control?.Layer.Sublayers.LastOrDefault();
-            Control?.Layer.Sublayers?[0].RemoveFromSuperLayer();
-            Control?.Layer.InsertSublayer(GradientLayer, 0);
         }
     }
 }

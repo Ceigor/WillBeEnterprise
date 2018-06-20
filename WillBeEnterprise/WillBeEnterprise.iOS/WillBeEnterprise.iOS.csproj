@@ -47,7 +47,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>ARM64</MtouchArch>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
@@ -186,7 +186,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\WillBeEnterprise\WillBeEnterprise.csproj">
-      <Project>{9FC28DFF-4B3A-4A72-A9BF-051EF88A0206}</Project>
+      <Project>{34A53F45-6ED9-4A0A-B594-09FD8B3EE24B}</Project>
       <Name>WillBeEnterprise</Name>
     </ProjectReference>
   </ItemGroup>
